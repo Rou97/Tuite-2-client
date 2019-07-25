@@ -37,7 +37,7 @@ export default {
         fontSize: '0.8rem',
         marginTop: 10
     },
-    progress: {
+        progress: {
         position: 'absolute'
     }
 };
