@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
@@ -11,7 +11,7 @@ import store from './redux/store';
 import { SET_AUTHENTICATED } from './redux/types';
 import { logoutUser, getUserData } from './redux/actions/userActions';
 
-import Navbar from './components/Navbar';
+import Navbar from './components/layout/Navbar';
 import themeObject from './util/theme';
 import AuthRoute from './util/AuthRoute';
 
@@ -35,7 +35,7 @@ if (token) {
 	}
 }
 
-class App extends Component  {
+class App extends Component {
 	render() {
 		return (
 			<MuiThemeProvider theme={theme}>
@@ -43,15 +43,15 @@ class App extends Component  {
 					<Router>
 						<Navbar />
 						<div className="container">
-						<Switch>
-							<Route exact path="/" component={home} />
-							<AuthRoute exact path="/login" component={login} />
-               				<AuthRoute exact path="/signup" component={signup} />
-						</Switch>
+							<Switch>
+								<Route exact path="/" component={home} />
+								<AuthRoute exact path="/login" component={login} />
+								<AuthRoute exact path="/signup" component={signup} />
+							</Switch>
 						</div>
 					</Router>
 				</Provider>
-      		</MuiThemeProvider>
+			</MuiThemeProvider>
 		);
 	}
 }
