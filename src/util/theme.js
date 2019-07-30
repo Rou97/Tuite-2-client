@@ -42,5 +42,16 @@ export default {
     },
     editButton: {
         float: 'right'
+    },
+    submitButton: {
+        position: 'relative'
+    },
+    progressSpinner: {
+        position: 'absolute'
+    },
+    closeButton: {
+        position: 'absolute',
+        left: '90%',
+        top: '10%'
     }
 };
