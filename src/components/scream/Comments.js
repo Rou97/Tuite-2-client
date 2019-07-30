@@ -16,8 +16,8 @@ const styles = {
         objectFit: 'cover',
         borderRadius: '50%'
     },
-    commentData: {
-        marginLeft: 0
+    bghq: {
+        background: 'red'
     }
 };
 
@@ -30,17 +30,17 @@ class Comments extends Component {
                     const { body, createdAt, userImage, userHandle } = comment;
                     return (
                         <Fragment key={createdAt}>
-                            <Grid /*item sm={10}*/>
+                            <Grid item sm={12}>
                                 <Grid container>
-                                    <Grid item sm={4}>
+                                    <Grid item sm={3}>
                                         <img
                                             src={userImage}
                                             alt="comment"
                                             className={classes.commentImage}
                                         />
                                     </Grid>
-                                    <Grid item sm={8}>
-                                        <div className={classes.commentData}>
+                                    <Grid item sm={9}>
+                                        <div>
                                             <Typography
                                                 variant="h5"
                                                 component={Link}

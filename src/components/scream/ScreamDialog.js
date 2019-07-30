@@ -80,7 +80,7 @@ class ScreamDialog extends Component {
                 <CircularProgress size={200} thickness={2} />
             </div>
         ) : (
-                <Grid container spacing={12}>
+                <Grid container>
                     <Grid item sm={5}>
                         <img src={userImage} alt="Profile" className={classes.profileImage} />
                     </Grid>
@@ -106,6 +106,7 @@ class ScreamDialog extends Component {
                         </MyButton>
                         <span>{commentCount} comments</span>
                     </Grid>
+                    {/* TODO: comment input */}
                     <hr className={classes.visibleSeparator} />
                     <Comments comments={comments} />
                 </Grid>
