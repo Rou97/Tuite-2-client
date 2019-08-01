@@ -22,6 +22,7 @@ import user from './pages/User';
 
 const theme = createMuiTheme(themeObject);
 
+axios.defaults.baseURL = 'https://europe-west1-tuite-2-4be7b.cloudfunctions.net/api';
 
 const token = localStorage.FBIdToken;
 if (token) {
